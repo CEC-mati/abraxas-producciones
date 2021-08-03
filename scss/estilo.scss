@@ -1,16 +1,16 @@
-
-
 /*Aspectos generales de los html*/
 * {
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto Condensed', sans-serif;
 }
+
 $verde-principal: #15D42C;
 $azul-letras: #284EF5;
 $naranja-enlaces: #F78119;
 $verde-titulos: #15D4B9;
 $ancho: 50px;
+
 header {
     background-color: $verde-principal;
 }
@@ -39,30 +39,34 @@ nav {
         }
     }
 }
-/*propiedades de los titulos y parrafos*/
 
-h1 {
+/*propiedades de los titulos y parrafos*/
+/*mati hace clases para esto -consejo del tano-*/
+.tituloPrincipal {
     color: $azul-letras;
     font-family: 'Viaoda Libre', cursive;
     font-size: 200%;
     text-align: center;
     text-decoration: solid;
 }
-h2 {
+
+.tituloSection {
     font-size: 36px;
     color: $verde-titulos;
 }
+
 h3 {
     color: $verde-titulos;
 }
+
 p {
     color: $azul-letras;
 }
+
 main {
     text-align: center;
     p {
         font-size: 28px;
-        
     }
 }
 
@@ -79,13 +83,14 @@ main {
     align-content: center;
     flex-basis: 200px;
 }
+
 .flexSection {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-    
 }
+
 .flexRealizacion {
     /*este flex lo uso solo en el section de realización cinematografica*/
     order: -1;
@@ -95,31 +100,44 @@ main {
     height: 15vh;
     transition: all 5s;
 }
+
 main:hover {
     height: 20vh;
     background-image: linear-gradient($verde-principal,white);
+    .cambioBlanco {
+        color: white;
+    }
 }
+
 .transNav {
     transition: 0s;
 }
+
 a:hover {
     color:white;
     background-image: radial-gradient($verde-principal, white);
 }
+
 /*Transformacion + animación */
 section {
     margin: 20px;
-    padding: 25px;
-
-    
+    padding: 25px; 
 }
+
 .efectoImagen{
     animation-name: efectoImagen;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 3s;
     animation-delay: 0s;
+}
 
+.efectoTexto{
+    animation-name: efectoTexto;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    animation-delay: 0s;
 }
 
 @keyframes efectoImagen {
@@ -144,40 +162,76 @@ section {
     }
 }
 
+@keyframes efectoTexto {
+    0% {
+        transform: translateX(-22px);
+
+    }
+    25% {
+        transform: translateX(-15px);
+
+    }
+    50% {
+        transform: translateX(-10px);
+
+    }
+    75%{
+        transform: translateX(-5px);
+
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
+
 //BOCKS
 .imagenAdaptable {
     max-width: 100%;
     height: auto;
+    
+    &__secciones {
+        max-width: 50%;
+        height: auto;
+    }
 }
-.imagenAdaptable__secciones {
-    max-width: 50%;
-    height: auto;
+
+.videoAdaptable {
+    height: 50vh;
+    width: 50%;
 }
+
 .subrayado {
     text-decoration: underline;
 }
+
 .parrafoGrande {
     font-size: 26px;
 }
+
 .textoDestacado {
     font-weight: bold; 
     font-style: italic;
     color: $verde-principal;
 }
+
 .negroDestacado {
     color: black;
     background-color: blanchedalmond;
 }
+
 .fondoPartitura {
-background-color: $verde-principal;
+    background-color: $verde-principal;
     background-repeat: repeat-x;
 }
-.verde {
-    color: #006d77;
+
+.tituloVideo {
+    color: $verde-titulos;
 }
+
 .spanEstilo {
     font-style: italic;
 }
+
 @for $i from 1 to 4 {
     .bloque#{$i} { width: 100% / $i; }
 }
