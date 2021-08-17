@@ -142,8 +142,8 @@ section {
     height: auto; }
 
 .videoAdaptable {
-  height: 50vh;
-  width: 50%; }
+  height: 100vh;
+  width: 100%; }
 
 .subrayado {
   text-decoration: underline; }
@@ -165,7 +165,7 @@ section {
   background-repeat: repeat-x; }
 
 .tituloVideo {
-  color: #15D4B9; }
+  color: #15D42C; }
 
 .spanEstilo {
   font-style: italic; }
@@ -306,7 +306,10 @@ section {
       background-color: seagreen; }
     100% {
       transform: translateX(0px);
-      background-color: seagreen; } } }
+      background-color: seagreen; } }
+  .videoAdaptable {
+    height: auto;
+    width: 100%; } }
 
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
   /*Tamaños font cel*/
@@ -380,4 +383,7 @@ section {
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: center; } }
+    align-items: center; }
+  .videoAdaptable {
+    height: auto;
+    width: 100%; } }
